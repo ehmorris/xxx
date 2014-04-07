@@ -29,6 +29,22 @@ a {
   @include user-select(none);
   width: 100%;
   z-index: 2;
+
+  &.alt1 {
+    font-family: 'Oswald';
+  }
+
+  &.alt2 {
+    font-family: 'Helvetica';
+  }
+
+  &.alt3 {
+    font-family: 'Open Sans';
+  }
+
+  &.alt4 {
+    font-family: 'PT Mono';
+  }
 }
 
 span {
@@ -38,6 +54,11 @@ span {
 video {
   min-height: 100%;
   min-width: 100%;
+  opacity: 0;
   @include position(absolute, 0px 0px 0px 0px);
   z-index: 1;
+
+  &.active {
+    opacity: 1;
+  }
 }
