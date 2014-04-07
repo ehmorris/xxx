@@ -8,9 +8,10 @@ body {
 }
 
 .blackness {
+  align-items: center;
   @include animation(black-flash 5s both infinite);
   background: black;
-  display: block;
+  display: flex;
   @include position(absolute, 0px 0px 0px 0px);
   z-index: 99;
 }
@@ -19,13 +20,14 @@ a {
   @include animation(color-flash 1s both infinite);
   color: red;
   display: block;
-  font-size: 18.25vw;
+  font-size: 33vh;
+  height: 100%;
   letter-spacing: .05em;
   opacity: .75;
-  @include position(absolute, 0px 0px 0 0px);
   text-align: center;
   text-decoration: none;
   @include user-select(none);
+  width: 100%;
   z-index: 2;
 }
 
