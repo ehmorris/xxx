@@ -1,5 +1,41 @@
 body {
-  font: 400 1em/1.4 $primary-font;
+  background: black;
+  font: 700 1em/1 'Oswald', sans-serif;
   margin: 0;
+  overflow: hidden;
+  padding: 0;
   text-rendering: optimizeLegibility;
+}
+
+.blackness {
+  @include animation(black-flash 5s both infinite);
+  background: black;
+  display: block;
+  @include position(absolute, 0px 0px 0px 0px);
+  z-index: 99;
+}
+
+a {
+  @include animation(color-flash 1s both infinite);
+  color: red;
+  display: block;
+  font-size: 18.25vw;
+  letter-spacing: .05em;
+  opacity: .75;
+  @include position(absolute, 0px 0px 0 0px);
+  text-align: center;
+  text-decoration: none;
+  @include user-select(none);
+  z-index: 2;
+}
+
+span {
+  display: block;
+}
+
+video {
+  min-height: 100%;
+  min-width: 100%;
+  @include position(absolute, 0px 0px 0px 0px);
+  z-index: 1;
 }
