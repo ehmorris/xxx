@@ -9,8 +9,9 @@ body {
 
 .blackness {
   align-items: center;
-  @include animation(black-flash 5s both infinite);
-  background: black;
+  @include animation(black-flash 5s linear both infinite);
+  background: url('/assets/background-black.jpg') black;
+  background-size: cover;
   display: flex;
   @include position(absolute, 0px 0px 0px 0px);
   z-index: 99;
