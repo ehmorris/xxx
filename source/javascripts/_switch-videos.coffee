@@ -2,8 +2,8 @@ $('.blackness a').on 'click', ->
   apply_random_font()
   show_random_video()
 
-  if random_number_between(1, 5) == 1
-    rapidly_cycle_videos(25, 50)
+  if random_number_between(1, 4) == 1
+    rapidly_cycle_videos(35, 50)
 
   false
 
@@ -16,9 +16,9 @@ show_random_video = ->
   $('video.active').removeClass('active')
   $("video:nth-of-type(#{random_video_index})").addClass('active')
 
-rapidly_cycle_videos = (cycle_count, speed) ->
+rapidly_cycle_videos = (cycle_count, speed_in_milliseconds) ->
   for x in [1...cycle_count] by 1
-    setTimeout(show_random_video, x*speed)
+    setTimeout(show_random_video, x*speed_in_milliseconds)
 
 random_number_between = (min, max)->
   Math.round(Math.random() * (max - min) + min)
