@@ -13,23 +13,28 @@
   100% { color: #b14e00; }
 }
 
+@include keyframes(text-crawl) {
+  0% { @include transform(translateX(100vw)); }
+  100% { @include transform(translateX(-2300vw)); }
+}
+
 @include keyframes(black-flash) {
      0% { opacity: 0; }
-   9.9% { opacity: 0; background-image: url('/assets/background-orange.jpg'); }
+   9.9% { opacity: 0; }
     10% { opacity: 1; }
-    11% { opacity: 1; background-image: url('/assets/background-black.jpg'); }
+    11% { opacity: 1; }
   19.9% { opacity: 1; }
-    20% { opacity: 0; }
-  24.9% { opacity: 0; }
-    25% { opacity: 1; background-image: url('/assets/background-orange.jpg'); }
-  25.9% { opacity: 1; background-image: url('/assets/background-maroon.jpg'); }
-    26% { opacity: 0; }
-  49.9% { opacity: 0; background-image: url('/assets/background-orange.jpg'); }
+    20% { opacity: .3; }
+  24.9% { opacity: .3; }
+    25% { opacity: 1; }
+  25.9% { opacity: 1; }
+    26% { opacity: .1; }
+  49.9% { opacity: .1; }
     50% { opacity: 1; }
-  59.8% { opacity: 1; background-image: url('/assets/background-orange.jpg'); }
-  59.9% { opacity: 1; background-image: url('/assets/background-black.jpg'); }
-    60% { opacity: 0; }
-  79.9% { opacity: 0; }
+  59.8% { opacity: 1; }
+  59.9% { opacity: 1; }
+    60% { opacity: .7; }
+  79.9% { opacity: .7; }
     80% { opacity: 1; }
   89.9% { opacity: 1; }
     90% { opacity: 0; }

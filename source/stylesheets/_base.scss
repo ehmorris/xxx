@@ -5,86 +5,50 @@ body {
   overflow: hidden;
   padding: 0;
   text-rendering: optimizeLegibility;
+  @include user-select(none);
 }
 
-.blackness {
+.blackness-flash, .text-container {
   align-items: center;
-  @include animation(black-flash 5s linear both infinite);
-  background: url('/assets/background-black.jpg') black;
-  background-size: cover;
   display: flex;
   @include position(absolute, 0px 0px 0px 0px);
-  z-index: 99;
 }
 
-a {
-  @include animation(color-flash 1s both infinite);
-  color: red;
-  display: block;
-  font-size: 33vh;
-  height: 100%;
-  letter-spacing: .05em;
-  opacity: .75;
-  text-align: center;
-  text-decoration: none;
-  @include user-select(none);
-  width: 100%;
+.text-container {
+  z-index: 3;
+}
+
+.blackness-flash {
+  @include animation(black-flash 10s linear both infinite);
+  background: #000;
   z-index: 2;
-
-  &.alt1 {
-    font-family: 'Oswald';
-  }
-
-  &.alt2 {
-    font-family: 'Helvetica';
-
-    span:nth-of-type(1) {
-      text-align: left;
-    }
-
-    span:nth-of-type(2) {
-      text-align: right;
-    }
-
-    span:nth-of-type(3) {
-      text-align: left;
-    }
-  }
-
-  &.alt3 {
-    font-family: 'Open Sans';
-    span:nth-of-type(1) {
-      text-align: left;
-    }
-
-    span:nth-of-type(2) {
-      text-align: left;
-    }
-
-    span:nth-of-type(3) {
-      text-align: left;
-    }
-  }
-
-  &.alt4 {
-    font-family: 'PT Mono';
-
-    span:nth-of-type(1) {
-      text-align: right;
-    }
-
-    span:nth-of-type(2) {
-      text-align: right;
-    }
-
-    span:nth-of-type(3) {
-      text-align: left;
-    }
-  }
 }
 
-span {
+.video-trigger {
+  @include animation(text-crawl 40s linear both infinite);
   display: block;
+  height: 100%;
+  text-align: center;
+  width: 100%;
+
+  span {
+    display: block;
+    font-family: 'Oswald';
+    font-size: 125vh;
+    position: absolute;
+    text-decoration: none;
+    top: -.1em;
+    white-space: nowrap;
+
+    &.flashing-text {
+      @include animation(color-flash 1s linear both infinite);
+      color: #000;
+    }
+
+    &.video-background {
+      color: #fff;
+    }
+  }
 }
 
 video {
