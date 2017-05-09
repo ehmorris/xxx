@@ -21,8 +21,8 @@
       }
 
       @keyframes text-crawl {
-        0% { transform: translateX(5%) }
-        100% { transform: translateX(-100%) }
+        0% { transform: scale(1.1) translateX(5%) }
+        100% { transform: scale(1.1) translateX(-100%) }
       }
 
       @keyframes black-flash {
@@ -59,10 +59,9 @@
       .flashing-text {
         animation: text-crawl 40s linear both infinite, color-flash 1s linear both infinite;
         display: block;
-        height: 106vh;
+        height: 100vh;
         position: relative;
-        top: -3vh;
-        width: auto;
+        width: 2918.18vh;
         z-index: 3;
       }
 
