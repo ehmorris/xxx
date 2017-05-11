@@ -51,7 +51,7 @@
         height: 100vh;
         position: relative;
         width: 2918.18vh;
-        z-index: 1;
+        z-index: 3;
       }
 
       .flashing-text {
@@ -72,17 +72,24 @@
         z-index: 2;
       }
 
-      .video {
-        bottom: 0px;
-        display: none;
-        left: 0px;
-        min-height: 100%;
-        min-width: 100%;
-        mix-blend-mode: difference;
+      .video_container {
+        left: 50%;
+        min-height: 100vh;
+        min-width: 100vw;
         position: absolute;
-        right: 0px;
-        top: 0px;
-        z-index: 3;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 177.77vh;
+        z-index: 1;
+      }
+
+      .video {
+        display: none;
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate3d(-50%, -50%, 0);
+        width: 100%;
       }
 
       .active_video { display: block; }
@@ -97,11 +104,13 @@
 
     <div class="blackness-flash"></div>
 
-    <video autoplay="true" class="video active_video" loop="true" src="assets/eat.mp4"></video>
-    <video autoplay="true" class="video" loop="true" src="assets/eyes.mp4"></video>
-    <video autoplay="true" class="video" loop="true" src="assets/finger.mp4"></video>
-    <video autoplay="true" class="video" loop="true" src="assets/mouth.mp4"></video>
-    <video autoplay="true" class="video" loop="true" src="assets/nose.mp4"></video>
+    <div class="video_container">
+      <video autoplay loop muted class="video active_video" src="assets/eat.mp4"></video>
+      <video autoplay loop muted preload class="video" src="assets/eyes.mp4"></video>
+      <video autoplay loop muted preload class="video" src="assets/finger.mp4"></video>
+      <video autoplay lopp muted preload class="video" src="assets/mouth.mp4"></video>
+      <video autoplay loop muted preload class="video" src="assets/nose.mp4"></video>
+    </div>
 
     <script>
       var rapidly_cycle_videos = function(cycle_count, speed_in_milliseconds) {
