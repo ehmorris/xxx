@@ -7,16 +7,17 @@
     <title>X X X E D W I N X X X</title>
     <style>
       @keyframes color-flash {
-        0% { fill: #ca6e19 }
-        20% { fill: #c56700 }
-        30% { fill: #3410dd }
-        35% { fill: #b14e00 }
-        40% { fill: #852a00 }
-        50% { fill: #ac8373 }
-        60% { fill: #600905 }
-        70% { fill: #c56700 }
-        80% { fill: #b14e00 }
-        90% { fill: #c56700 }
+        0%   { fill: #ca6e19 }
+        10%  { fill: #600905 }
+        20%  { fill: #b14e00 }
+        30%  { fill: #3410dd }
+        35%  { fill: #b14e00 }
+        40%  { fill: #852a00 }
+        50%  { fill: #ac8373 }
+        60%  { fill: #600905 }
+        70%  { fill: #c56700 }
+        80%  { fill: #b14e00 }
+        90%  { fill: #c56700 }
         100% { fill: #b14e00 }
       }
 
@@ -26,26 +27,15 @@
       }
 
       @keyframes black-flash {
-        0% { opacity: 0 }
-        9.9% { opacity: 0 }
-        10% { opacity: 1 }
-        11% { opacity: 1 }
-        19.9% { opacity: 1 }
-        20% { opacity: .2 }
-        24.9% { opacity: .2 }
-        25% { opacity: 1 }
-        25.9% { opacity: 1 }
-        26% { opacity: .1 }
-        49.9% { opacity: .1 }
-        50% { opacity: 1 }
-        59.8% { opacity: 1 }
-        59.9% { opacity: 1 }
-        60% { opacity: .5 }
-        79.9% { opacity: .5 }
-        80% { opacity: 1 }
-        89.9% { opacity: 1 }
-        90% { opacity: 0 }
-        99.9% { opacity: 0 }
+        0%   { opacity: 0 }
+        10%  { opacity: 1 }
+        20%  { opacity: .2 }
+        25%  { opacity: 1 }
+        26%  { opacity: .1 }
+        50%  { opacity: 1 }
+        60%  { opacity: .5 }
+        80%  { opacity: 1 }
+        90%  { opacity: 0 }
       }
 
       body {
@@ -65,14 +55,14 @@
       }
 
       .flashing-text {
-        animation: color-flash 10s linear infinite;
+        animation: color-flash 2s steps(2) infinite;
         display: block;
         height: 100%;
         width: 100%;
       }
 
       .blackness-flash {
-        animation: black-flash 10s linear infinite;
+        animation: black-flash 5s steps(1) infinite;
         background: #000;
         bottom: 0px;
         left: 0px;
