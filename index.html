@@ -37,6 +37,10 @@
         80%  { opacity: 1 }
         90%  { opacity: 0 }
       }
+      
+      *::-webkit-media-controls-start-playback-button {
+        display: none;
+      }
 
       body {
         background: black;
@@ -101,11 +105,11 @@
     <div class="blackness-flash"></div>
 
     <div class="video_container">
-      <video autoplay loop muted class="video active_video" src="assets/eat.mp4"></video>
-      <video autoplay loop muted preload class="video" src="assets/eyes.mp4"></video>
-      <video autoplay loop muted preload class="video" src="assets/finger.mp4"></video>
-      <video autoplay loop muted preload class="video" src="assets/mouth.mp4"></video>
-      <video autoplay loop muted preload class="video" src="assets/nose.mp4"></video>
+      <video playsinline autoplay loop muted class="video active_video" src="assets/eat.mp4"></video>
+      <video playsinline autoplay loop muted preload class="video" src="assets/eyes.mp4"></video>
+      <video playsinline autoplay loop muted preload class="video" src="assets/finger.mp4"></video>
+      <video playsinline autoplay loop muted preload class="video" src="assets/mouth.mp4"></video>
+      <video playsinline autoplay loop muted preload class="video" src="assets/nose.mp4"></video>
     </div>
 
     <script>
