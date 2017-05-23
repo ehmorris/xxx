@@ -130,13 +130,17 @@
         document.getElementsByClassName('active_video')[0].classList.remove('active_video');
         document.getElementsByClassName('video')[random_video_index].classList.add('active_video');
       };
-
-      document.addEventListener('click', function() {
+      
+      var show_random_video_or_rapidly_cycle = function() {
         show_random_video();
         if (random_number_between(1, 2) === 1) {
           rapidly_cycle_videos(35, 50);
         }
-      });
+      };
+      
+      document.addEventListener('touchstart', show_random_video_or_rapidly_cycle);
+
+      document.addEventListener('click', show_random_video_or_rapidly_cycle);
     </script>
   </body>
 </html>
