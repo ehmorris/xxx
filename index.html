@@ -46,7 +46,6 @@
 
       .text_container {
         height: 100vh;
-        overflow: hidden;
         position: relative;
         width: 100vw;
         z-index: 3;
@@ -163,9 +162,10 @@
         }
       };
 
-      var cycle_video_and_step_text = function() {
+      var cycle_video_and_step_text = function(e) {
         cycle_video();
         step_text_sequence();
+        e.preventDefault();
       };
 
       document.addEventListener('touchstart', cycle_video_and_step_text);
